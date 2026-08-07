@@ -1,6 +1,7 @@
 import { useState } from "react";
 import logo from "../assets/cardapio-logo.png";
 import Input from "../components/Input";
+import { Link } from "react-router";
 
 function Register() {
   const [name, setName] = useState("");
@@ -21,7 +22,9 @@ function Register() {
         className="flex flex-col justify-center items-center gap-2 w-full max-w-[350px] p-2 sm:p-0"
         onSubmit={handleSubmit}
       >
-        <img src={logo} className="mb-4" width={150} alt="" />
+        <Link to="/">
+          <img src={logo} className="mb-4" width={150} alt="" />
+        </Link>
         <Input
           placeholder="Nome Completo"
           type="text"
