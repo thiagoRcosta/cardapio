@@ -2,6 +2,7 @@ import { useState } from "react";
 import logo from "../assets/cardapio-logo.png";
 import Input from "../components/Input";
 import { Link } from "react-router";
+import Button from "../components/Button";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -32,9 +33,14 @@ function Login() {
           type="password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button className="bg-amber-400 text-black w-full mt-2 p-2 rounded-md font-bold text-sm cursor-pointer">
-          Login
-        </button>
+        <Button title="Login" />
+        <Link to="/register" className="w-full">
+          <Button
+            title="Não tenho uma conta"
+            variant="outline"
+            onClick={() => {}}
+          />
+        </Link>
       </form>
     </div>
   );
