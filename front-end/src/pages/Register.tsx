@@ -2,6 +2,7 @@ import { useState } from "react";
 import logo from "../assets/cardapio-logo.png";
 import Input from "../components/Input";
 import { Link } from "react-router";
+import Button from "../components/Button";
 
 function Register() {
   const [name, setName] = useState("");
@@ -50,9 +51,14 @@ function Register() {
           type="text"
           onChange={(e) => setPostalCode(e.target.value)}
         />
-        <button className="bg-amber-400 text-black w-full mt-2 p-2 rounded-md font-bold text-sm cursor-pointer">
-          Cadastrar
-        </button>
+        <Button title="Criar conta" />
+        <Link to="/login" className="w-full">
+          <Button
+            title="Já tenho uma conta"
+            variant="outline"
+            onClick={() => {}}
+          />
+        </Link>
       </form>
     </div>
   );
